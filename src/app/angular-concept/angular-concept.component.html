@@ -1,0 +1,41 @@
+<!-- <p>angular-concept works!</p> -->
+<p>Hello Universe</p>
+<h3>location {{city}}</h3>
+
+
+
+
+@if (isLoggedIn) {
+    <p>yes! the server is not running </p>
+  }
+
+  @else { No, the server is not running }
+
+  <section (mouseover)="onMouseOver()">
+    <p>There's a secret message for you, hover to reveal:
+    {{ message }}</p>
+  </section>
+  <section (click)="greet()">
+    <p>There's a secret message for you, click to reveal:
+    {{ message12 }}</p>
+  </section>
+
+  <p>Username: {{ username }}</p>
+    <p>Framework:{{favoriteFramework}}</p>
+    <label for="framework">
+     <p>Favorite Framework:</p>
+
+      <input id="framework" type="text" [(ngModel)]="favoriteFramework" />
+    </label>
+   <button (click)="showFramework()">Show Framework</button>
+   <div [contentEditable]="isEditable"></div>
+
+
+
+
+
+  <h2>for example</h2>
+
+  @for(user of thamu ; track user.id) {
+    <p>{{ user.name }}</p>
+}
